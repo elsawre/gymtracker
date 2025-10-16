@@ -188,7 +188,7 @@ export default function GymTrackerApp() {
                       <CartesianGrid strokeDasharray="3 3" />
                       <XAxis dataKey="date" tickMargin={8} />
                       <YAxis domain={["dataMin - 5", "dataMax + 5"]} width={60} />
-                      <Tooltip formatter={(value:any) => `${value} kg`} labelFormatter={(l) => `Datum: ${l}`} />
+                      <Tooltip formatter={(value: number | string) => `${value} kg`} labelFormatter={(l: string) => `Datum: ${l}`} />
                       <Line type="monotone" dataKey="Gewicht" strokeWidth={2} dot />
                     </LineChart>
                   </ResponsiveContainer>
